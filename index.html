@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Anuj Wadhwa — Portfolio</title>
+<meta name="description" content="Anuj Wadhwa — Principal Product Manager. Three projects exploring agentic AI in ads, marketplaces, and commerce.">
+<style>
+  :root {
+    --blue: #1a73e8;
+    --blue-light: #e8f0fe;
+    --purple: #6f42c1;
+    --purple-light: #f3eaff;
+    --green: #188038;
+    --green-light: #e6f4ea;
+    --text: #202124;
+    --muted: #5f6368;
+    --border: #dadce0;
+    --bg-page: #f8f9fa;
+    --bg-card: #ffffff;
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
+    color: var(--text);
+    background: var(--bg-page);
+    line-height: 1.55;
+    font-size: 15px;
+    -webkit-font-smoothing: antialiased;
+  }
+  .wrap { max-width: 1080px; margin: 0 auto; padding: 48px 28px 64px; }
+
+  /* ─── Hero ──────────────────────────────────────────── */
+  header.hero {
+    text-align: center;
+    margin-bottom: 18px;
+    padding: 20px 32px 14px;
+  }
+  header.hero h1 {
+    margin: 0 0 8px;
+    font-size: 38px;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+  }
+  header.hero .tagline {
+    color: var(--muted);
+    font-size: 16px;
+    margin-bottom: 18px;
+    font-weight: 500;
+  }
+  header.hero .contact a {
+    color: var(--blue);
+    text-decoration: none;
+    margin: 0 12px;
+    font-size: 14px;
+    font-weight: 500;
+  }
+  header.hero .contact a:hover { text-decoration: underline; }
+
+  /* ─── Section intro ─────────────────────────────────── */
+  .section-intro {
+    text-align: center;
+    margin: 26px auto 22px;
+    max-width: 720px;
+  }
+  .section-intro .eyebrow {
+    color: var(--blue);
+    font-size: 11.5px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: 8px;
+  }
+  .section-intro h2 {
+    font-size: 22px;
+    font-weight: 600;
+    color: var(--text);
+    margin: 0 0 6px;
+  }
+  .section-intro p {
+    color: var(--muted);
+    font-size: 14.5px;
+    margin: 0;
+  }
+
+  /* ─── Project grid ──────────────────────────────────── */
+  .projects {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+    margin-top: 8px;
+  }
+  .project {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    overflow: hidden;
+    transition: transform 0.18s ease, box-shadow 0.18s ease;
+    display: flex;
+    flex-direction: column;
+  }
+  .project:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 18px rgba(60,64,67,.10), 0 2px 6px rgba(60,64,67,.06);
+  }
+  .project .accent {
+    height: 6px;
+    background: var(--blue);
+  }
+  .project.p1 .accent { background: var(--blue); }
+  .project.p2 .accent { background: var(--purple); }
+  .project.p3 .accent { background: var(--green); }
+
+  .project .body {
+    padding: 22px 22px 20px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+  .project .label {
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin-bottom: 10px;
+  }
+  .project.p1 .label { color: var(--blue); }
+  .project.p2 .label { color: var(--purple); }
+  .project.p3 .label { color: var(--green); }
+
+  .project h3 {
+    margin: 0 0 12px;
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--text);
+    line-height: 1.35;
+  }
+  .project .desc {
+    color: var(--muted);
+    font-size: 14px;
+    line-height: 1.55;
+    margin-bottom: 16px;
+    flex: 1;
+  }
+  .project .tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-bottom: 18px;
+  }
+  .project .tags span {
+    background: var(--bg-page);
+    border: 1px solid var(--border);
+    padding: 3px 9px;
+    border-radius: 12px;
+    font-size: 11.5px;
+    color: var(--text);
+    font-weight: 500;
+  }
+  .project .view {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    color: var(--blue);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 14px;
+    padding: 10px 16px;
+    background: var(--blue-light);
+    border-radius: 6px;
+    align-self: flex-start;
+    transition: background 0.15s ease;
+  }
+  .project.p2 .view { color: var(--purple); background: var(--purple-light); }
+  .project.p3 .view { color: var(--green); background: var(--green-light); }
+  .project .view:hover { filter: brightness(0.96); }
+
+  /* ─── Footer ────────────────────────────────────────── */
+  footer {
+    text-align: center;
+    color: var(--muted);
+    font-size: 12.5px;
+    padding: 38px 0 0;
+  }
+
+  /* ─── Responsive ────────────────────────────────────── */
+  @media (max-width: 860px) {
+    .projects { grid-template-columns: 1fr; }
+    header.hero h1 { font-size: 30px; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header class="hero">
+  <h1>Anuj Wadhwa</h1>
+  <div class="tagline">Principal Product Manager · Ads · Marketplaces · Ranking · Agentic Commerce</div>
+  <div class="contact">
+    <a href="mailto:anujwadhwa08@gmail.com">anujwadhwa08@gmail.com</a>
+    <a href="https://linkedin.com/in/anujwadhwa-pm">LinkedIn</a>
+  </div>
+</header>
+
+<div class="section-intro">
+  <div class="eyebrow">Personal projects · 2026</div>
+  <h2>Exploring agentic AI in ads, marketplaces, and commerce</h2>
+  <p>Three end-to-end builds, each from problem framing to working artifact.</p>
+</div>
+
+<div class="projects">
+
+  <div class="project p1">
+    <div class="accent"></div>
+    <div class="body">
+      <div class="label">Project 1 — Commerce Ads</div>
+      <h3>Agentic Commerce Ads Platform</h3>
+      <div class="desc">
+        Two-agent commerce ads platform over a 31K-product catalog. Unified organic-and-sponsored ranking, multi-slot GSP auction, three concurrent pricing experiments, automated drift detection, and a chat-based Campaign Manager Agent. Drove a 12× search-latency reduction (5,700ms → 470ms) on the full LLM-ranking pipeline.
+      </div>
+      <div class="tags">
+        <span>LangGraph</span><span>pgvector</span><span>Claude</span>
+        <span>GSP auction</span><span>LangSmith</span>
+      </div>
+      <a class="view" href="/commerce-ads/">View project →</a>
+    </div>
+  </div>
+
+  <div class="project p2">
+    <div class="accent"></div>
+    <div class="body">
+      <div class="label">Project 2 — CTV Ads</div>
+      <h3>Agentic CTV Ad Decisioning Platform</h3>
+      <div class="desc">
+        End-to-end streaming-TV ad platform that personalizes ads per viewer in real time — server-side, before video reaches the player. Server-Side Ad Insertion via HLS manifest stitching, second-price (Vickrey) auction with competitive separation, and four monetization surfaces (live break, VOD chapter, pause, binge frequency).
+      </div>
+      <div class="tags">
+        <span>SSAI</span><span>HLS</span><span>Vickrey auction</span>
+        <span>SCTE-35</span><span>VAST</span>
+      </div>
+      <a class="view" href="/streaming-ad-demo/">View project →</a>
+    </div>
+  </div>
+
+  <div class="project p3">
+    <div class="accent"></div>
+    <div class="body">
+      <div class="label">Project 3 — Commerce + Agents</div>
+      <h3>DeliverOS — AI-Native Food Delivery</h3>
+      <div class="desc">
+        Multi-bot food delivery platform across Telegram (customer, restaurant, driver), web admin, and React Native app — all on a shared backend with a 15-state order lifecycle. MCP server with 6 tools lets any AI agent search, order, and track delivery end-to-end behind an OTP consent gate. LLM-as-Judge eval framework caught a silent fail-open bug in testing, not production.
+      </div>
+      <div class="tags">
+        <span>MCP</span><span>Telegram</span><span>React Native</span>
+        <span>LLM-as-Judge</span><span>FastAPI</span>
+      </div>
+      <a class="view" href="/DeliverOS-portfolio/">View project →</a>
+    </div>
+  </div>
+
+</div>
+
+<footer>
+  Designed and built by Anuj Wadhwa
+</footer>
+
+</div>
+</body>
+</html>
